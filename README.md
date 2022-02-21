@@ -17,7 +17,9 @@ The aim of this application is to create a web portal for facilitating an online
 * The admin can manage complete control of the website. He/she can modify the channel list and packages, view payment details of customers subscribing his cable network.
 
 **Flow of Control and Use:**
+
 ====SERVER NAME====
+
 The localhost server responsible for hpsting SQL in my Personal computer is:
 'localhost:3307', because the default port '3306' was not available.
 
@@ -26,6 +28,7 @@ change the server name in each php file where there is a connection being establ
 to the databases.
 
 ====AUTHENTICATION====
+
 For Users (Any credentials from the 'user' table from the DB 'login')
 
 Username: (Eg: Manoj123)
@@ -42,6 +45,7 @@ Password : Admin
 4.But if Login as user, directed to user's home page ->home.php
 
 ====MODIFICATIONS FOR MAIL MODULE====
+
 To use the email feature, we should do modifications in php.ini and sendmail.ini 
 
 In php.ini file in XAMPP under the [ mail function ] change the content to this:-
@@ -52,7 +56,7 @@ SMTP=smtp.gmail.com
 smtp_port=587
 sendmail_from =smh.cabletv@gmail.com 
 sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
---------------------------------------------------------------------------------------------------------------
+
 In sendmail.ini file in XAMPP change the content to:-
 
 [sendmail]
@@ -64,14 +68,15 @@ debug_logfile=debug.log
 auth_username=smh.cabletv@gmail.com
 auth_password=iznagryigppihkgq
 force_sender=smh.cabletv@gmail.com
-----------------------------------------------------------------------------------------------------------------------------
+
 For reference : https://www.youtube.com/watch?v=9W644cyDyNM  
 
 Note:In the php mysql connection, port number of database server has been changed to 3307, need to be modified based on system.
 
-FOR PAYMENT MODULE:
+**FOR PAYMENT MODULE:**
 
 ====FLOW OF CONTROL====
+
 After clicking on payment, the user will have confirm payment and select the payment mode
 then after entering details and otp validation, the payment status will be displayed in the webpage
 1.payment.php - to select payment type
@@ -99,9 +104,10 @@ transaction.php - To view the transaction history of the user
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-FOR 'My MSH' MODULE:
+**FOR 'My MSH' MODULE:**
 
 ====FLOW OF CONTROL====
+
 After clicking on the 'My MSH' option on the top navigation bar:
 1. You will be redirected to the file 'index.php', where you can slide through three sliding pages.
 2. The first of these options is 'Manage subscriptions (mytv.php):
